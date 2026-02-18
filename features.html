@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - AirPods Premium Wireless Audio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tech.css">
+    <link rel="stylesheet" href="responsive.css">
+    <meta name="description" content="Explore the amazing features of AirPods">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-content">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                </svg>
+                AirPods
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="tech.html">Technology</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-btn" onclick="toggleSearch()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-btn" onclick="window.location.href='shop.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="btn-primary" onclick="window.location.href='shop.html'">Buy Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Search products...">
+                <button onclick="toggleSearch()">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="features-page">
+        <!-- Hero Header -->
+        <section class="page-header">
+            <div class="header-content">
+                <h1>Features.</h1>
+                <p>Everything you love. Everything you need.</p>
+            </div>
+        </section>
+
+        <!-- Features Container -->
+        <section class="features-container">
+            <!-- Feature Block 1: Noise Cancellation -->
+            <div class="feature-block scroll-reveal">
+                <div class="feature-grid">
+                    <div class="feature-text">
+                        <h2>Active Noise<br><span>Cancellation.</span></h2>
+                        <p>AirPods 3 deliver up to 2x more Active Noise Cancellation than the previous generation. So you'll hear dramatically less noise during your commute and when you need to focus.</p>
+                        <div class="feature-specs">
+                            <div class="spec-item">
+                                <div class="spec-value">2x</div>
+                                <div class="spec-label">More ANC</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">48k</div>
+                                <div class="spec-label">Adjustments/sec</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">-35dB</div>
+                                <div class="spec-label">Noise Reduction</div>
+                            </div>
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Adaptive Transparency mode
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Personalized volume control
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Conversation awareness
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://cdn.leonardo.ai/users/023ec84e-7082-49b3-a24b-20822bac4871/generations/1f107782-f999-63e0-ac85-b594c05cf271/lucid-origin_A_pair_of_white_AirPods_Max_headphones_sit_next_to_a_serene_hare_with_soft_fluff-0.jpg" alt="Noise Cancellation">
+                        <div class="image-badge">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3964b4" stroke-width="2">
+                                <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Block 2: Spatial Audio -->
+            <div class="feature-block scroll-reveal">
+                <div class="feature-grid reverse">
+                    <div class="feature-text">
+                        <h2>Personalized<br><span>Spatial Audio.</span></h2>
+                        <p>Personalized Spatial Audio with dynamic head tracking works with all your devices to immerse you deeper in all-around-you sound. And with three sizes of silicone tips, you get a custom fit with the perfect seal.</p>
+                        <div class="feature-specs">
+                            <div class="spec-item">
+                                <div class="spec-value">360°</div>
+                                <div class="spec-label">Sound Field</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">Dolby</div>
+                                <div class="spec-label">Atmos Support</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">3</div>
+                                <div class="spec-label">Tip Sizes</div>
+                            </div>
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Dynamic head tracking
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Personalized sound profile
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Works with all content
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <video autoplay muted loop>
+                            <source src="Product_animation_of_wireless_earbuds_coming_out_of_the_charging_case.__Clean_white_background.__Min_seed432001583.mp4" type="video/mp4">
+                        </video>
+                        <div class="image-badge">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#af52de" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="10 8 16 12 10 16 10 8"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Block 3: Battery & Charging -->
+            <div class="feature-block scroll-reveal">
+                <div class="feature-grid">
+                    <div class="feature-text">
+                        <h2>MagSafe<br><span>Charging.</span></h2>
+                        <p>The MagSafe Charging Case delivers an array of charging options. Charge with a USB-C connector, an Apple Watch charger, or MagSafe. You can also use a Qi-certified charger.</p>
+                        <div class="feature-specs">
+                            <div class="spec-item">
+                                <div class="spec-value">30h</div>
+                                <div class="spec-label">Total Listening</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">5min</div>
+                                <div class="spec-label">Fast Charge</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">3</div>
+                                <div class="spec-label">Ways to Charge</div>
+                            </div>
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                MagSafe compatible
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                USB-C connector
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Qi wireless charging
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <img src="lucid-origin_A_top-down_flat_lay_photography_of_an_open_Apple_AirPods_case_with_white_AirPods-0.jpg" alt="MagSafe Charging">
+                        <div class="image-badge">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2">
+                                <rect x="2" y="7" width="16" height="10" rx="2"/>
+                                <line x1="22" y1="11" x2="22" y2="13"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Block 4: Controls -->
+            <div class="feature-block scroll-reveal">
+                <div class="feature-grid reverse">
+                    <div class="feature-text">
+                        <h2>Touch<br><span>Controls.</span></h2>
+                        <p>The force sensor gives you even more control over your audio. Swipe up or down to adjust volume, press to play and pause music or answer and end calls, or hold to switch between listening modes.</p>
+                        <div class="feature-specs">
+                            <div class="spec-item">
+                                <div class="spec-value">Swipe</div>
+                                <div class="spec-label">Volume Control</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">Press</div>
+                                <div class="spec-label">Play/Pause</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-value">Hold</div>
+                                <div class="spec-label">Switch Modes</div>
+                            </div>
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Intuitive gestures
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Customizable actions
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Siri voice control
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <img src="lucid-origin_A_3D_render_of_an_Apple_AirPod._Holographic_icons_floating_next_to_the_stem_a_vo-0.jpg" alt="Touch Controls">
+                        <div class="image-badge">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff9500" stroke-width="2">
+                                <path d="M12 2a3 3 0 0 0-3 3v14a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                <path d="M12 18v3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <h2 class="comparison-title scroll-reveal">Compare Models</h2>
+            <div class="comparison-table scroll-reveal">
+                <div class="comparison-row header">
+                    <div class="comparison-cell">Feature</div>
+                    <div class="comparison-cell">AirPods 4</div>
+                    <div class="comparison-cell">AirPods 3</div>
+                    <div class="comparison-cell">Pods Max</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Active Noise Cancellation</div>
+                    <div class="comparison-cell no">—</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Spatial Audio</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Adaptive EQ</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">H2 Chip</div>
+                    <div class="comparison-cell no">—</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Battery Life</div>
+                    <div class="comparison-cell">30h</div>
+                    <div class="comparison-cell">30h</div>
+                    <div class="comparison-cell">20h</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Water Resistance</div>
+                    <div class="comparison-cell">IPX4</div>
+                    <div class="comparison-cell">IPX4</div>
+                    <div class="comparison-cell">—</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">MagSafe Case</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                    <div class="comparison-cell yes">✓</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to experience AirPods?</h2>
+            <p>Choose the perfect model for your lifestyle.</p>
+            <div class="cta-buttons">
+                <button class="btn-large btn-black" onclick="window.location.href='shop.html'">Shop Now</button>
+                <button class="btn-large btn-outline" onclick="window.location.href='tech.html'">Explore Tech</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html">AirPods 3</a></li>
+                    <li><a href="shop.html">AirPods 4</a></li>
+                    <li><a href="shop.html">Pods Max</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Order Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 AirPods. All rights reserved.</p>
+            <p>United States</p>
+        </div>
+    </footer>
+
+
+    <script src="products.js"></script>
+    <script src="animation.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="features.js"></script>
+</body>
+</html>

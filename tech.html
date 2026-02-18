@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - AirPods Premium Wireless Audio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tech.css">
+    <link rel="stylesheet" href="responsive.css">
+    <meta name="description" content="Discover the cutting-edge technology behind AirPods">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-content">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                </svg>
+                AirPods
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="tech.html">Technology</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-btn" onclick="toggleSearch()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-btn" onclick="window.location.href='shop.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="btn-primary" onclick="window.location.href='shop.html'">Buy Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" placeholder="Search products...">
+                <button onclick="toggleSearch()">×</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="tech-page">
+        <!-- Hero Header -->
+        <section class="page-header">
+            <div class="header-content">
+                <h1>Innovation.</h1>
+                <p>Engineered for extraordinary audio experiences</p>
+            </div>
+        </section>
+
+        <!-- H2 Chip Section -->
+        <section class="tech-container">
+            <div class="chip-section scroll-reveal">
+                <div class="chip-info">
+                    <h2>H2 Chip.<br><span>The brain behind the sound.</span></h2>
+                    <p>The all-new H2 chip is the force behind the advanced audio performance of AirPods 3. Working with the driver and amplifier, it enables crisp, clear high notes and deep, rich bass in stunning definition.</p>
+                    <div class="chip-stats">
+                        <div class="chip-stat">
+                            <div class="chip-stat-value">2x</div>
+                            <div class="chip-stat-label">More Active Noise Cancellation</div>
+                        </div>
+                        <div class="chip-stat">
+                            <div class="chip-stat-value">5nm</div>
+                            <div class="chip-stat-label">Process Technology</div>
+                        </div>
+                        <div class="chip-stat">
+                            <div class="chip-stat-value">10B</div>
+                            <div class="chip-stat-label">Transistors</div>
+                        </div>
+                        <div class="chip-stat">
+                            <div class="chip-stat-value">48k</div>
+                            <div class="chip-stat-label">Noise Reductions/sec</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chip-visual">
+                    <img src="lucid-origin_A_highly_detailed_3D_rendering_of_AirPods_3_Pro_showcasing_the_sleek_and_modern_-0.jpg" alt="H2 Chip" class="chip-image">
+                    <div class="chip-overlay">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2997ff" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <path d="M9 9h6v6H9z"/>
+                            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Section -->
+        <section class="engineering-section">
+            <div class="engineering-grid">
+                <div class="engineering-card scroll-reveal">
+                    <div class="engineering-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <path d="M12 12 2.1 10.5"/>
+                        </svg>
+                    </div>
+                    <h3>Spatial Audio</h3>
+                    <p>Dynamic head tracking creates a theater-like experience that surrounds you in sound.</p>
+                </div>
+                <div class="engineering-card scroll-reveal">
+                    <div class="engineering-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Adaptive EQ</h3>
+                    <p>Automatically tunes music to your ears for a rich, consistent listening experience.</p>
+                </div>
+                <div class="engineering-card scroll-reveal">
+                    <div class="engineering-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        </svg>
+                    </div>
+                    <h3>ANC Technology</h3>
+                    <p>Active Noise Cancellation reduces unwanted external sounds for immersive audio.</p>
+                </div>
+                <div class="engineering-card scroll-reveal">
+                    <div class="engineering-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>Instant Pairing</h3>
+                    <p>One-tap setup connects to all your devices seamlessly with iCloud sync.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Battery Technology -->
+        <section class="tech-container">
+            <div class="battery-showcase scroll-reveal">
+                <h2 class="battery-title">All-day battery life.</h2>
+                <p class="battery-subtitle">Up to 30 hours of listening time with the charging case.</p>
+                <div class="battery-grid">
+                    <div class="battery-card">
+                        <div class="battery-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2">
+                                <rect x="2" y="7" width="16" height="10" rx="2"/>
+                                <line x1="22" y1="11" x2="22" y2="13"/>
+                            </svg>
+                        </div>
+                        <div class="battery-value">6h</div>
+                        <div class="battery-label">Single Charge Listening</div>
+                    </div>
+                    <div class="battery-card">
+                        <div class="battery-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <div class="battery-value">5min</div>
+                        <div class="battery-label">Charge = 1 Hour Listening</div>
+                    </div>
+                    <div class="battery-card">
+                        <div class="battery-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="battery-value">30h</div>
+                        <div class="battery-label">Total with Charging Case</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connectivity Section -->
+        <section class="connectivity-section">
+            <div class="tech-container">
+                <div class="connectivity-grid scroll-reveal">
+                    <div class="connectivity-visual">
+                        <img src="https://cdn.leonardo.ai/users/023ec84e-7082-49b3-a24b-20822bac4871/generations/1f107781-b936-6330-b1f5-756cdf0dc308/lucid-origin_A_pair_of_white_AirPods_Max_headphones_with_a_resemblance_to_hare_ears_featuring-0.jpg" alt="Connectivity" class="connectivity-image">
+                    </div>
+                    <div class="connectivity-info">
+                        <h2>Bluetooth 5.3.<br><span>Faster. Stronger. Better.</span></h2>
+                        <p>The latest Bluetooth technology delivers faster transmission speeds, greater range, and more stable connections than ever before.</p>
+                        <ul class="connectivity-list">
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Extended range up to 800 feet
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Lower latency for gaming and video
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Improved power efficiency
+                            </li>
+                            <li>
+                                <div class="check-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                Seamless device switching
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sensors Section -->
+        <section class="tech-container">
+            <div class="sensors-section scroll-reveal">
+                <h2 class="sensors-title">Intelligent sensors.</h2>
+                <p class="sensors-subtitle">Advanced technology that responds to you.</p>
+                <div class="sensors-grid">
+                    <div class="sensor-card">
+                        <div class="sensor-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3964b4" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                            </svg>
+                        </div>
+                        <h3>Optical Sensors</h3>
+                        <p>Detect when they're in your ears to play and pause audio automatically.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <div class="sensor-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3964b4" stroke-width="2">
+                                <path d="M12 2a3 3 0 0 0-3 3v14a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                <path d="M12 18v3"/>
+                            </svg>
+                        </div>
+                        <h3>Motion Accelerometers</h3>
+                        <p>Enable dynamic head tracking for immersive spatial audio.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <div class="sensor-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3964b4" stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                <line x1="12" y1="19" x2="12" y2="23"/>
+                                <line x1="8" y1="23" x2="16" y2="23"/>
+                            </svg>
+                        </div>
+                        <h3>Voice Accelerometer</h3>
+                        <p>Recognizes when you're speaking and works with microphones to filter out external noise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Experience the technology.</h2>
+            <p>Get your AirPods today and hear the difference.</p>
+            <div class="cta-buttons">
+                <button class="btn-large btn-black" onclick="window.location.href='shop.html'">Shop Now</button>
+                <button class="btn-large btn-outline" onclick="window.location.href='features.html'">Learn More</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html">AirPods 3</a></li>
+                    <li><a href="shop.html">AirPods 4</a></li>
+                    <li><a href="shop.html">Pods Max</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Order Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 AirPods. All rights reserved.</p>
+            <p>United States</p>
+        </div>
+    </footer>
+
+
+
+    <script src="products.js"></script>
+    <script src="animation.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="features.js"></script>
+</body>
+</html>
