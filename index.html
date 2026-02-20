@@ -12,42 +12,73 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-content">
-            <div class="logo" onclick="window.location.href='index.html'">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                </svg>
-                AirPods
-            </div>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="tech.html">Technology</a></li>
-                <li><a href="shop.html">Shop</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <button class="nav-btn" onclick="toggleSearch()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                </button>
-                <button class="nav-btn" onclick="showPage('cart')">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <span class="cart-badge" id="cartBadge">0</span>
-                </button>
-                <button class="btn-primary" href="shop.html">Buy Now</button>
-            </div>
+<nav class="nav" id="navbar">
+    <div class="nav-content">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+            AirPods
         </div>
-    </nav>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="tech.html">Technology</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="nav-btn search-btn" onclick="toggleSearch()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+            <button class="nav-btn cart-btn" onclick="showPage('cart')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+            <button class="btn-primary desktop-buy" onclick="window.location.href='shop.html'">Buy Now</button>
+            <button class="burger-menu" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <div class="logo" onclick="window.location.href='index.html'; toggleMobileMenu();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+            AirPods
+        </div>
+        <button class="close-menu" onclick="toggleMobileMenu()">×</button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" onclick="toggleMobileMenu()">Home</a></li>
+        <li><a href="features.html" onclick="toggleMobileMenu()">Features</a></li>
+        <li><a href="tech.html" onclick="toggleMobileMenu()">Technology</a></li>
+        <li><a href="shop.html" onclick="toggleMobileMenu()">Shop</a></li>
+    </ul>
+    <div class="mobile-menu-actions">
+        <button class="btn-primary mobile-buy-btn" onclick="window.location.href='shop.html'; toggleMobileMenu();">Buy Now</button>
+    </div>
+</div>
+
+<!-- Menu Overlay -->
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMobileMenu()"></div>
     
     <!-- Search Overlay -->
     <div id="searchOverlay">
