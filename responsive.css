@@ -1,4 +1,305 @@
-/* Адаптивность только для поиска */
+
+
+/* Burger Menu Button */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    margin-left: 5px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.burger-menu:hover {
+    background: var(--bg-secondary);
+}
+
+.burger-menu span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    width: 22px;
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    width: 22px;
+}
+
+/* Mobile Menu - Красивое выезжающее меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    padding: 80px 25px 30px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    border-radius: 0 0 0 20px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--bg-secondary);
+}
+
+.mobile-menu-header .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.close-menu {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--text);
+    line-height: 1;
+}
+
+.close-menu:hover {
+    background: var(--border);
+    transform: rotate(90deg);
+}
+
+/* Навигационные ссылки в меню */
+.mobile-nav-links {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 5px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+    transition-delay: calc(0.05s * var(--i, 0));
+}
+
+.mobile-menu.active .mobile-nav-links li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-nav-links li:nth-child(1) { --i: 1; }
+.mobile-nav-links li:nth-child(2) { --i: 2; }
+.mobile-nav-links li:nth-child(3) { --i: 3; }
+.mobile-nav-links li:nth-child(4) { --i: 4; }
+
+.mobile-nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 16px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-nav-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--primary);
+    opacity: 0.1;
+    transition: width 0.3s;
+    z-index: -1;
+}
+
+.mobile-nav-links a:hover {
+    color: var(--primary);
+    transform: translateX(8px);
+}
+
+.mobile-nav-links a:hover::before {
+    width: 100%;
+}
+
+/* Кнопка Buy Now в мобильном меню */
+.mobile-menu-actions {
+    padding-top: 30px;
+    border-top: 2px solid var(--bg-secondary);
+}
+
+.mobile-buy-btn {
+    width: 100%;
+    padding: 18px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    background: var(--primary) !important;
+    border-radius: 50px !important;
+    box-shadow: 0 10px 20px rgba(57, 100, 180, 0.3);
+    transition: all 0.3s !important;
+}
+
+.mobile-buy-btn:hover {
+    background: var(--primary-dark) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(57, 100, 180, 0.4);
+}
+
+.mobile-buy-btn:active {
+    transform: translateY(0);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    backdrop-filter: blur(3px);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .nav-actions {
+        gap: 8px;
+    }
+    
+    .nav-btn {
+        padding: 8px;
+        background: var(--bg-secondary);
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+    
+    .nav-btn:hover {
+        background: var(--border);
+    }
+    
+    .nav-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .desktop-buy {
+        display: none !important;
+    }
+    
+    .cart-badge {
+        top: -2px;
+        right: -2px;
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 11px;
+    }
+    
+    .nav-actions {
+        gap: 12px;
+    }
+}
+
+
+
+@media (max-width: 380px) {
+    .mobile-menu {
+        width: 90%;
+        padding: 70px 15px 25px;
+    }
+    
+    .mobile-nav-links a {
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+    
+    .nav-actions {
+        gap: 5px;
+    }
+    
+    .nav-btn {
+        padding: 6px;
+    }
+    
+    .nav-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
 @media (max-width: 1024px) {
     #searchOverlay .search-container {
         margin: 150px auto;
@@ -6,7 +307,7 @@
     }
     
     #searchOverlay .search-input-wrapper input {
-        font-size: 32px;
+        font-size: 36px;
     }
 }
 
@@ -17,12 +318,13 @@
     }
     
     #searchOverlay .search-input-wrapper input {
-        font-size: 24px;
+        font-size: 28px;
         padding: 15px 0;
     }
     
     #searchOverlay .search-input-wrapper button {
-        font-size: 32px;
+        font-size: 36px;
+        right: 5px;
     }
 }
 
@@ -33,15 +335,16 @@
     }
     
     #searchOverlay .search-input-wrapper input {
-        font-size: 20px;
+        font-size: 22px;
         padding: 12px 0;
     }
     
     #searchOverlay .search-input-wrapper button {
-        font-size: 28px;
+        font-size: 32px;
         right: 0;
     }
 }
+
 
 
 .feature-image video {
@@ -50,14 +353,156 @@
     max-width: 100%;
     border-radius: 24px;
     display: block;
-    background: #f5f5f7; /* фон пока видео грузится */
+    background: #f5f5f7;
 }
 
-/* Для мобильных */
 @media (max-width: 768px) {
     .feature-image video {
         border-radius: 16px;
-        min-height: 200px; /* минимальная высота */
+        min-height: 200px;
         object-fit: cover;
     }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .cart-item-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cart-item-details {
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .quantity-control {
+        width: 100%;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+    
+    .cart-summary {
+        padding: 20px;
+    }
+    
+    .summary-row.total {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .comparison-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .comparison-cell:first-child {
+        grid-column: 1 / -1;
+        text-align: center;
+        background: var(--bg-secondary);
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    
+    .comparison-row.header {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .engineering-grid,
+    .battery-grid,
+    .connectivity-grid,
+    .sensors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .engineering-grid,
+    .battery-grid,
+    .connectivity-grid,
+    .sensors-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .chip-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .chip-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .chip-stat {
+        padding: 20px;
+    }
+    
+    .page-header h1 {
+        font-size: 48px !important;
+    }
+    
+    .page-header p {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 36px !important;
+    }
+    
+    .page-header p {
+        font-size: 16px !important;
+    }
+    
+    .engineering-card,
+    .battery-card,
+    .sensor-card {
+        padding: 30px 20px;
+    }
+}
+
+
+
+
+body, html {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero, .hero-content, .hero-visual, .hero-text {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+section, div, article, main {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+/* Принудительно убираем полосу прокрутки по горизонтали */
+body {
+    overflow-x: hidden !important;
 }
