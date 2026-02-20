@@ -1,4 +1,3 @@
-// script.js - ЕДИНСТВЕННАЯ ВЕРСИЯ
 
 // Навигация
 window.addEventListener('scroll', () => {
@@ -218,3 +217,44 @@ function openTech() {
 }
 
 
+// Глобальная функция для бургер-меню (ДОЛЖНА БЫТЬ ПЕРВОЙ)
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('menuOverlay');
+    const burger = document.querySelector('.burger-menu');
+    
+    if (!menu) return;
+    
+    menu.classList.toggle('active');
+    if (burger) burger.classList.toggle('active');
+    if (overlay) overlay.classList.toggle('active');
+    
+    // Блокируем прокрутку body
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+}
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const menu = document.getElementById('mobileMenu');
+        if (menu && menu.classList.contains('active')) {
+            toggleMobileMenu();
+        }
+    }
+});
+
+// Закрытие при изменении размера экрана
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('menuOverlay');
+        const burger = document.querySelector('.burger-menu');
+        
+        if (menu && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            if (burger) burger.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
